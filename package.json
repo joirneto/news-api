@@ -1,0 +1,23 @@
+{
+  "name": "news-api",
+  "version": "1.0.0",
+  "description": "API de sistemas de noticias",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joirneto/news-api.git"
+  },
+  "keywords": [],
+  "author": "Joir Neto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joirneto/news-api/issues"
+  },
+  "homepage": "https://github.com/joirneto/news-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
