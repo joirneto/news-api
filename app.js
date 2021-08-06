@@ -33,7 +33,7 @@ app.get('/categorias/:categoriaId/noticias', (req, res) => {
 app.get('/categorias/:categoriaId/noticias/:noticiaId', (req, res) => {
   connection.query(`SELECT titulo, conteudo FROM sistema_noticias.noticias WHERE id_categoria = ${req.params.categoriaId} and id = ${req.params.noticiaId}`, function(err, rows, fields) {
     if (err) throw err; 
-    res.send(rows);
+    res.send(rows[0]);
   });
 });
 
