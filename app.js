@@ -27,5 +27,5 @@ app.get('/categorias', (req, res) => {
 connection.end();
 
 app.listen(PORT, ()=> {
-  console.log(`Server listenig in PORT ${PORT}`);
+  console.log(`Server listenig at http://localhost:${PORT}`);
 });
