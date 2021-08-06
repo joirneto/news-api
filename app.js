@@ -17,14 +17,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/categorias', (req, res) => {
-
   connection.query('SELECT id, nome FROM sistema_noticias.categoria', function(err, rows, fields) {
     if (err) throw err; 
     res.send(rows);
   });
 });
 
-connection.end();
+app.get('/categorias/:categoriaId/noticias', (req, res) => {
+  connection.query(`SELECT id, titulo FROM sistema_noticias.noticias WHERE id_categoria = ${req.params.categoriaId}`, function(err, rows, fields) {
+    if (err) throw err; 
+    res.send(rows);
+  });
+});
+
+//connection.end();
 
 app.listen(PORT, ()=> {
   console.log(`Server listenig at http://localhost:${PORT}`);
